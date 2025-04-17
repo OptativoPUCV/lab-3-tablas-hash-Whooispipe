@@ -169,13 +169,14 @@ Pair * searchMap(HashMap * map,  char * key) {
     {
         return NULL;
     }
-    if(map->buckets[i]->key==NULL || map->buckets[i]==NULL || map->buckets[i]->value==NULL){return NULL;}
+    if(is_equal(map->buckets[i]->key,key ))
+    {
+        map->current=posicion;
+        return map->buckets[i];
 
 
-    
-    
-
-
+    }
+    else{return NULL;}
     return NULL;
 }
 
