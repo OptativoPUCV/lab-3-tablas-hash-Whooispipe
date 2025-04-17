@@ -173,7 +173,7 @@ Pair * searchMap(HashMap * map,  char * key) {
     }
 
 
-
+    return;
 }
 
 Pair * firstMap(HashMap * map) {
