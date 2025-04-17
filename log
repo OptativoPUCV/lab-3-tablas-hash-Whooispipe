@@ -99,3 +99,9 @@ hashmap.c:168:14: error: unused variable 'i' [-Werror=unused-variable]
               ^
 cc1.exe: all warnings being treated as errors
 b55d0bf
+Thu, Apr 17, 2025 12:16:21 AM: 
+ hashmap.c | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+ tests:  6|4
+total_score: 30/70
+6f77d1f
