@@ -25,3 +25,20 @@ hashmap.c:84:10: error: unused variable 'posicion' [-Werror=unused-variable]
           ^~~~~~~~
 cc1.exe: all warnings being treated as errors
 10b7686
+Wed, Apr 16, 2025 11:15:59 PM: 
+ hashmap.c | 17 ++++++++++++++++-
+ 1 file changed, 16 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'insertMap':
+hashmap.c:85:5: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+     if(posicion= -1){return;}
+     ^~
+hashmap.c:87:69: error: comparison between pointer and integer [-Werror]
+     if(map->buckets[posicion]==NULL && map->buckets[posicion]->value==-1)
+                                                                     ^~
+hashmap.c:92:43: error: expected expression before 'Pair'
+             map->buckets[posicion]=malloc(Pair);
+                                           ^~~~
+cc1.exe: all warnings being treated as errors
+81d3ad4

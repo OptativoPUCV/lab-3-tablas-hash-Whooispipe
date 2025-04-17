@@ -75,13 +75,28 @@ long posicionvalida(HashMap*map, char*key)
         }
 
     }
-    return j;   
+    return i;   
 
 
 }
 
 void insertMap(HashMap * map, char * key, void * value) {
     long posicion= posicionvalida(map, key);
+    if(posicion= -1){return;}
+
+    if(map->buckets[posicion]==NULL && map->buckets[posicion]->value==-1)
+    {
+        if(map->buckets[posicion]==NULL)
+        {
+
+            map->buckets[posicion]=malloc(Pair);
+            if(map->buckets[posicion]==NULL)return;
+        }   
+        map->buckets[posicion]->key=key;
+        map->buckets[posicion]->value=value;
+        map->size++;
+
+    }
 
 }
 
