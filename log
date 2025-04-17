@@ -48,3 +48,20 @@ Wed, Apr 16, 2025 11:57:55 PM:
  tests:  5|4
 total_score: 30/70
 8e8c836
+Thu, Apr 17, 2025 12:14:02 AM: 
+ hashmap.c | 37 +++++++++++++++++++++++++++++++++++++
+ 1 file changed, 37 insertions(+)
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'searchMap':
+hashmap.c:169:9: error: expected ',' or ';' before 'if'
+         if(map->buckets[i]==NULL)
+         ^~
+hashmap.c:168:14: error: unused variable 'i' [-Werror=unused-variable]
+         long i = posicionvalida(map, key)
+              ^
+hashmap.c:177:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1.exe: all warnings being treated as errors
+c0d2eab
