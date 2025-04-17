@@ -64,13 +64,15 @@ long posicionvalida(HashMap*map, char*key)
 {
     long i= hash(key, map->capacity);
     long j=0;
-    while(map->buckets[i]!=NULL && map->buckets[i]->key!=key)
+    while(map->buckets[i]!=NULL )
     {
+        if(is_equal(map->buckets[i]->key,key)){
+            return -1;
+        }
         i=(i+1)%map->capacity;
         j++;
         if(j==map->capacity)
         {
-
             return -1;
         }
 
@@ -81,23 +83,19 @@ long posicionvalida(HashMap*map, char*key)
 }
 
 void insertMap(HashMap * map, char * key, void * value) {
-    long posicion= posicionvalida(map, key);
-    if(posicion= -1){return;}
+    if (map == NULL || key == NULL) return;
 
-    if(map->buckets[posicion]==NULL && map->buckets[posicion]->value==-1)
+    long posicion = posicionvalida(map, key);
+
+    if (posicion == -1) 
     {
-        if(map->buckets[posicion]==NULL)
-        {
-
-            map->buckets[posicion]=malloc(Pair);
-            if(map->buckets[posicion]==NULL)return;
-        }   
-        map->buckets[posicion]->key=key;
-        map->buckets[posicion]->value=value;
+        return; 
+    } 
+    else {
+        map->buckets[posicion] = createPair(strdup(key), value); 
         map->size++;
-
+        map->current = posicion;
     }
-
 }
 
 void enlarge(HashMap * map) {
