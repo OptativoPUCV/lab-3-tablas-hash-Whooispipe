@@ -167,7 +167,7 @@ Pair * searchMap(HashMap * map,  char * key) {
     else
     {  
         long i = posicionvalida(map, key);
-        if(map->buckets[i]==NULL)
+        if(map->buckets[i]==-1)
         {
             return NULL;
         }

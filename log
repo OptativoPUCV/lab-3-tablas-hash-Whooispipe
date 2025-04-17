@@ -111,3 +111,14 @@ Thu, Apr 17, 2025 12:17:14 AM:
  tests:  6|4
 total_score: 30/70
 eefdf01
+Thu, Apr 17, 2025 12:18:17 AM: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'searchMap':
+hashmap.c:170:27: error: comparison between pointer and integer [-Werror]
+         if(map->buckets[i]==-1)
+                           ^~
+cc1.exe: all warnings being treated as errors
+5d70fb8
