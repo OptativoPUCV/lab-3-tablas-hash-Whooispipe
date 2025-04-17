@@ -164,17 +164,16 @@ Pair * searchMap(HashMap * map,  char * key) {
 
 
     }
-    else
-    {  
-        long i = posicionvalida(map, key);
-        if(i==-1)
-        {
-            return NULL;
-        }
+    long i = posicionvalida(map, key);
+    if(i==-1)
+    {
+        return NULL;
+    }
+    if(map->buckets[i]->key==NULL || map->buckets[i]==NULL || map->buckets[i]->value==NULL){return NULL;}
 
 
     
-    }
+    
 
 
     return NULL;
