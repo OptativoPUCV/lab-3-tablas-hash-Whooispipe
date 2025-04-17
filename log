@@ -85,3 +85,17 @@ hashmap.c:158:8: note: declared here
         ^~~~~~~~~
 cc1.exe: all warnings being treated as errors
 56d15e9
+Thu, Apr 17, 2025 12:15:05 AM: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'searchMap':
+hashmap.c:169:9: error: expected ',' or ';' before 'if'
+         if(map->buckets[i]==NULL)
+         ^~
+hashmap.c:168:14: error: unused variable 'i' [-Werror=unused-variable]
+         long i = posicionvalida(map, key)
+              ^
+cc1.exe: all warnings being treated as errors
+b55d0bf
