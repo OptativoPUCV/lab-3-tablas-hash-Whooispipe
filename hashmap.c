@@ -38,7 +38,8 @@ int is_equal(void* key1, void* key2){
     return 0;
 }
 
-/*2.- Implemente la función void insertMap(HashMap * map, char * key, void * value). Esta función inserta un 
+/*
+2.- Implemente la función void insertMap(HashMap * map, char * key, void * value). Esta función inserta un 
 nuevo dato (key,value) en el mapa y actualiza el índice current a esa posición.
 Recuerde que para insertar un par (clave,valor) debe:
 
@@ -59,8 +60,28 @@ Recuerde actualizar la variable size.
     }
 
 */
+long posicionvalida(HashMap*map, char*key)
+{
+    long i= hash(key, map->capacity);
+    long j=0;
+    while(map->buckets[i]!=NULL && map->buckets[i]->key!=key)
+    {
+        i=(i+1)%map->capacity;
+        j++;
+        if(j==map->capacity)
+        {
+
+            return -1;
+        }
+
+    }
+    return j;   
+
+
+}
+
 void insertMap(HashMap * map, char * key, void * value) {
-    
+    long posicion= posicionvalida(map, key);
 
 }
 

@@ -14,3 +14,14 @@ Wed, Apr 16, 2025 10:58:14 PM:
  tests:  1|5
 total_score: 10/70
 623853a
+Wed, Apr 16, 2025 11:08:47 PM: 
+ hashmap.c | 25 +++++++++++++++++++++++--
+ 1 file changed, 23 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'insertMap':
+hashmap.c:84:10: error: unused variable 'posicion' [-Werror=unused-variable]
+     long posicion= posicionvalida(map, key);
+          ^~~~~~~~
+cc1.exe: all warnings being treated as errors
+10b7686
