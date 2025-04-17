@@ -156,28 +156,22 @@ Recuerde que el arreglo es **circular**.
 
 
 Pair * searchMap(HashMap * map,  char * key) {
-    long posicion= hash(key,map->capacity);
-    if(is_equal(map->buckets[posicion]->key,key ))
-    {
-        map->current=posicion;
-        return map->buckets[posicion];
+    if (map == NULL || key == NULL || map->size == 0) return NULL;
+    long i = hash(key, map->capacity);
+    long l = i;
+    long j = 0;
 
 
+    while (map->buckets[l] != NULL && j < map->capacity) {
+        if (map->buckets[l]->key != NULL && is_equal(map->buckets[l]->key, key)) {
+            map->current = l;
+            return map->buckets[l];
+        }
+        l = (l + 1) % map->capacity;
+        j++;
     }
-    long i = posicionvalida(map, key);
-    if(i==-1)
-    {
-        return NULL;
-    }
-    if(is_equal(map->buckets[i]->key,key ))
-    {
-        map->current=posicion;
-        return map->buckets[i];
 
-
-    }
-    else{return NULL;}
-    return NULL;
+    return NULL; 
 }
 
 Pair * firstMap(HashMap * map) {
