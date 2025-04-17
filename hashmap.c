@@ -159,6 +159,7 @@ Pair * searchMap(HashMap * map,  char * key) {
     long posicion= hash(key,map->capacity);
     if(is_equal(map->buckets[posicion]->key,key ))
     {
+        map->current=posicion;
         return map->buckets[posicion];
 
 
