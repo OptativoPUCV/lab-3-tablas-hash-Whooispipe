@@ -137,11 +137,7 @@ Recuerde actualizar la variable size.
 
     }*/
 void eraseMap(HashMap * map,  char * key) {    
-    Pair *aeliminar= searchMap(map, key);
-    aeliminar->key=NULL;
-    map->size--;
     
-
 
 }
 
