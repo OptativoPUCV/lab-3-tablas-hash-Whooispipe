@@ -136,8 +136,19 @@ Recuerde actualizar la variable size.
 
 
     }*/
-void eraseMap(HashMap * map,  char * key) {    
-    
+void eraseMap(HashMap * map,  char * key) { 
+    if (map == NULL || key == NULL) return;
+    Pair *pair = searchMap(map, key);
+    if (pair != NULL) 
+    {
+        free(pair->key); // Liberar la memoria de la clave
+        pair->key = NULL; // Invalidar la clave
+        map->size--;
+    }   
+
+
+
+
 
 }
 
