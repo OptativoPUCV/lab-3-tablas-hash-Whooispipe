@@ -141,7 +141,7 @@ void eraseMap(HashMap * map,  char * key) {
     Pair *pair = searchMap(map, key);
     if (pair != NULL) 
     {
-        free(pair->key); // Liberar la memoria de la clave
+        //free(pair->key); // Liberar la memoria de la clave
         pair->key = NULL; // Invalidar la clave
         map->size--;
     }   
