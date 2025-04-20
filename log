@@ -175,3 +175,14 @@ Sun, Apr 20, 2025 12:11:57 PM:
  tests:  13|2
 total_score: 50/70
 a973b16
+Sun, Apr 20, 2025 12:13:59 PM: 
+ hashmap.c | 12 +++++++++++-
+ 1 file changed, 11 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:4:0:
+hashmap.c: In function 'nextMap':
+hashmap.c:230:5: error: statement with no effect [-Werror=unused-value]
+     for(i; i != map->current; i = (i + 1) % map->capacity) {
+     ^~~
+cc1.exe: all warnings being treated as errors
+f197205
